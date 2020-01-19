@@ -5,7 +5,6 @@ import { Grid, Input, Button, Form } from 'semantic-ui-react';
 class SearchComponent extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             zipCode: ''
         }

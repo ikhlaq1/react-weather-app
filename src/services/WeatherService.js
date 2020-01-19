@@ -83,14 +83,9 @@ class WeatherService extends Component {
 
             })
             .catch(err => {
-                // this.setState({ loading: false });
+
             });
-        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=${
-            this.state.temperatureUnits
-            }&appid=${WEATHER_API_KEY}`;
-        axios.get(forecastUrl).then(result => {
-            // this.setState({ forecast: result.data.list, loading: false });
-        });
+   
     }
 
     render() {
@@ -103,6 +98,7 @@ class WeatherService extends Component {
                         checked={res.value === this.state.value}
                         onRadioChange={this.handleChange}
                         onFetchClick={this.handleModel}
+                        disabled={res.value === this.state.value}
                     />
                 ))}
                 <SearchComponent onSearchClick={this.searchZipCode} />
@@ -125,12 +121,7 @@ class WeatherService extends Component {
                 </div>
             </div>
         );
-
     }
-
 }
-
-
-
 
 export { WeatherService };

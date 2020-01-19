@@ -12,13 +12,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then((data) => {
-        console.log({ data })
-        this.setState({ appData: data })
-      })
-      .catch(console.log)
 
   }
   render() {
